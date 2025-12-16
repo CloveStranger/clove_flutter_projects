@@ -1,0 +1,11 @@
+name: clove_flutter_workspace
+publish_to: none
+environment:
+  sdk: ^3.8.0
+workspace:
+  - packages/auto_go_router
+  - packages/auto_go_router_builder
+dev_dependencies:
+  melos: ^7.0.0-dev.9
+
+melos:
