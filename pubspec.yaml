@@ -4,11 +4,24 @@ environment:
   sdk: ^3.8.0
 
 workspace:
+  - apps/clove_todo
   - packages/auto_go_router
   - packages/auto_go_router_builder
 
+dependencies:
+  flutter:
+    sdk: flutter
+  auto_go_router:
+    path: packages/auto_go_router
+  auto_go_router_builder:
+    path: packages/auto_go_router_builder
+  flutter_lints: ^6.0.0
+
 dev_dependencies:
   melos: ^7.3.0
+  source_gen: ^4.1.1
+  analyzer: ^9.0.0
+  build: ^4.0.3
 
 melos:
   # 包路径配置

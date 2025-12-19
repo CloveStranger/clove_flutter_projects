@@ -1,5 +1,5 @@
-name: auto_go_router
-description: "A new Flutter package project."
+name: auto_go_router_builder
+description: "Auto generate GoRouter routes builder definition from your app's routes."
 version: 0.0.1
 homepage:
 
@@ -12,6 +12,10 @@ resolution: workspace
 dependencies:
   flutter:
     sdk: flutter
+  auto_go_router: ^0.0.1
+  source_gen: ^4.1.1
+  analyzer: ^9.0.0
+  build: ^4.0.3
 
 dev_dependencies:
   flutter_test:

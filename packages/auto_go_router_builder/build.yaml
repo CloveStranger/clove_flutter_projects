@@ -1,0 +1,13 @@
+targets:
+  $default:
+    builders:
+      auto_go_router_builder:
+        enabled: true
+
+builders:
+  auto_go_router_builder:
+    import: "package:auto_go_router_builder/auto_go_router_builder.dart"
+    builder_factories: ["goRouterBridgeBuilder"]
+    build_extensions: {".dart": [".bridge.dart"]}
+    auto_apply: dependents
+    build_to: source

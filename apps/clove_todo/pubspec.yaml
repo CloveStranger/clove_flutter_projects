@@ -7,33 +7,28 @@ version: 1.0.0+1
 environment:
   sdk: ^3.10.1
 
+resolution: workspace
+
 dependencies:
   flutter:
     sdk: flutter
-
   cupertino_icons: ^1.0.8
-
   flutter_bloc: ^8.1.6
   equatable: ^2.0.5
-
   get_it: ^7.7.0
-
-  # Routing
   go_router: ^13.2.2
-
-  # HTTP Client
   dio: ^5.4.0
   table_calendar: ^3.2.0
   intl: ^0.20.2
-  source_gen: ^4.1.1
+  auto_go_router: ^0.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  bloc_test: ^9.1.7
   mocktail: ^1.0.3
   flutter_lints: ^6.0.0
   build_runner: ^2.10.4
+  auto_go_router_builder: ^0.0.1
 
 flutter:
   uses-material-design: true

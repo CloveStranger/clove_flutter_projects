@@ -1,6 +1,6 @@
+import 'package:auto_go_router/auto_go_router.dart';
 import 'package:clove_todo/features/todo/presentation/pages/todo_page.dart';
 
-import 'auto_go_router_builder.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +15,9 @@ class AppRoutes {
   static const String todoEdit = '/todos/edit';
 }
 
-@GoRouterBridge(routes: [RouteDef('/todos', TodoPage)])
+@GoRouterBuilderBridge(routes: [
+  BuilderRoute('/todos', TodoPage),
+])
 class UserRoute {
   const UserRoute();
 }
