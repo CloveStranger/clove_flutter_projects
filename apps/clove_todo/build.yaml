@@ -1,0 +1,15 @@
+targets:
+  $default:
+    builders:
+      clove_todo:bridge_builder:
+        enabled: true
+        generate_for:
+          - lib/app/config/routes.dart
+builders:
+  bridge_builder:
+    # ✅ 这里才是定义 import 的地方
+    import: "package:clove_todo/app/config/auto_go_router_builder.dart"
+    builder_factories: ["bridgeBuilder"]
+    build_extensions: { ".dart": [".bridge.dart"] }
+    auto_apply: dependents
+    build_to: source
