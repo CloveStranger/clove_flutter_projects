@@ -2,10 +2,80 @@ name: clove_flutter_workspace
 publish_to: none
 environment:
   sdk: ^3.8.0
+
 workspace:
   - packages/auto_go_router
   - packages/auto_go_router_builder
+
 dev_dependencies:
-  melos: ^7.0.0-dev.9
+  melos: ^7.3.0
 
 melos:
+  # 包路径配置
+  packages:
+    - packages/**
+
+  # 脚本命令
+  scripts:
+    # 安装所有依赖
+    bootstrap:
+      description: 安装所有包的依赖
+      run: melos exec -- "flutter pub get"
+
+    # 清理构建产物
+    clean:
+      description: 清理所有包的构建产物
+      run: melos exec -- "flutter clean"
+
+    # 运行测试
+    test:
+      description: 运行所有包的测试
+      run: melos exec -- "flutter test"
+
+    # 代码分析
+    analyze:
+      description: 分析所有包的代码
+      run: melos exec -- "flutter analyze"
+
+    # 格式化代码
+    format:
+      description: 格式化所有包的代码
+      run: melos exec -- "dart format ."
+
+    # 检查代码格式
+    format:check:
+      description: 检查代码格式（不修改）
+      run: melos exec -- "dart format --set-exit-if-changed ."
+
+    # 发布前检查
+    publish:check:
+      description: 检查所有包是否准备好发布
+      run: melos exec -- "flutter pub publish --dry-run"
+
+    # 生成代码
+    build_runner:
+      description: 运行 build_runner 生成代码
+      run: melos exec -- "dart run build_runner build --delete-conflicting-outputs"
+
+    # 监听并生成代码
+    build_runner:watch:
+      description: 监听文件变化并自动生成代码
+      run: melos exec -- "dart run build_runner watch --delete-conflicting-outputs"
+
+  # 忽略的包（如果有的话）
+  ignore:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+
+  # 版本管理配置（如果需要发布到 pub.dev）
+  version:
+    # 自动生成变更日志
+    changelog: true
+    # 变更日志文件路径
+    changelogPath: CHANGELOG.md
+    # 是否在发布时提交变更
+    commit: true
+    # 是否在发布时创建 git tag
+    tag: true
+    # 是否在发布时推送变更
+    push: true
