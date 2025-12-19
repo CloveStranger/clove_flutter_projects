@@ -1,0 +1,3 @@
+[submodule "import/prompt_database"]
+	path = import/prompt_database
+	url = https://github.com/CloveStranger/prompt_database
