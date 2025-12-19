@@ -15,9 +15,7 @@ class AppRoutes {
   static const String todoEdit = '/todos/edit';
 }
 
-@GoRouterBuilderBridge(routes: [
-  BuilderRoute('/todos', TodoPage),
-])
+@GoRouterBuilderBridge(routes: [BuilderRoute('/todos', TodoPage)])
 class UserRoute {
   const UserRoute();
 }
