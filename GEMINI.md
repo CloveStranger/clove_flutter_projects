@@ -55,3 +55,10 @@ See `import/prompt_database/project_documents/ca_architecture_spec.md` for Clean
 1.  Ensure **FVM** is installed.
 2.  Run `melos run bootstrap` to install dependencies.
 3.  To run the app: `cd apps/clove_todo && fvm flutter run`.
+
+## Core Identity & Behavior
+Please strictly adhere to the guidelines, safety mandates, and persona defined in:
+- `import/prompt_database/soul_documents/soul_document_cleaned_up.md` (Core Identity)
+- `import/prompt_database/project_documents/ca_architecture_spec.md` (Architecture & Coding Standards)
+
+If you are unsure about how to handle a complex interaction, ethical dilemma, or architectural decision, **you must read these files** to guide your response.
