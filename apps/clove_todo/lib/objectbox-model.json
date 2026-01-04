@@ -1,0 +1,346 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:263682012878894995",
+      "lastPropertyId": "8:1433902640238436279",
+      "name": "CategoryModel",
+      "properties": [
+        {
+          "id": "1:970273487234632712",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2216595015002857581",
+          "name": "categoryId",
+          "type": 9,
+          "flags": 2080,
+          "indexId": "1:1755180745289735871"
+        },
+        {
+          "id": "3:8075488864048884327",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "4:7672130673843261599",
+          "name": "color",
+          "type": 9
+        },
+        {
+          "id": "5:3879418617465401681",
+          "name": "icon",
+          "type": 9
+        },
+        {
+          "id": "6:7287358550133256650",
+          "name": "isDefault",
+          "type": 1
+        },
+        {
+          "id": "7:8854458380885681860",
+          "name": "createdAt",
+          "type": 10
+        },
+        {
+          "id": "8:1433902640238436279",
+          "name": "updatedAt",
+          "type": 10
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:871680447717514891",
+      "lastPropertyId": "11:9001407315212046187",
+      "name": "DeviceModel",
+      "properties": [
+        {
+          "id": "1:3438611402793041027",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2782422912130330068",
+          "name": "deviceId",
+          "type": 9,
+          "flags": 2080,
+          "indexId": "2:8913809777298525633"
+        },
+        {
+          "id": "3:2229372827153080958",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "4:3255005315129367134",
+          "name": "ipAddress",
+          "type": 9
+        },
+        {
+          "id": "5:4214378585471904764",
+          "name": "port",
+          "type": 6
+        },
+        {
+          "id": "6:7972253737087714770",
+          "name": "type",
+          "type": 2
+        },
+        {
+          "id": "7:4121618874255560041",
+          "name": "isConnected",
+          "type": 1
+        },
+        {
+          "id": "8:2894600900195736610",
+          "name": "lastSyncTime",
+          "type": 10
+        },
+        {
+          "id": "9:2282712074892714099",
+          "name": "publicKey",
+          "type": 9
+        },
+        {
+          "id": "10:5963359043766204767",
+          "name": "discoveredAt",
+          "type": 10
+        },
+        {
+          "id": "11:9001407315212046187",
+          "name": "updatedAt",
+          "type": 10
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:4533602116414280180",
+      "lastPropertyId": "10:5647762335693606511",
+      "name": "ReminderModel",
+      "properties": [
+        {
+          "id": "1:8630018029222799010",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2009264891271904392",
+          "name": "reminderId",
+          "type": 9,
+          "flags": 2080,
+          "indexId": "3:4592552275713327524"
+        },
+        {
+          "id": "3:355010567260314261",
+          "name": "scheduleId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "4:8568316965518355834",
+          "relationTarget": "ScheduleModel"
+        },
+        {
+          "id": "4:1823656816091319605",
+          "name": "remindTime",
+          "type": 10
+        },
+        {
+          "id": "5:6289622672740199501",
+          "name": "type",
+          "type": 2
+        },
+        {
+          "id": "6:1753584450789914668",
+          "name": "isTriggered",
+          "type": 1
+        },
+        {
+          "id": "7:662899652753428028",
+          "name": "minutesBefore",
+          "type": 6
+        },
+        {
+          "id": "8:5677678857732848829",
+          "name": "customMessage",
+          "type": 9
+        },
+        {
+          "id": "9:1221993705972625907",
+          "name": "createdAt",
+          "type": 10
+        },
+        {
+          "id": "10:5647762335693606511",
+          "name": "updatedAt",
+          "type": 10
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:8036669778344400724",
+      "lastPropertyId": "10:45698094348914599",
+      "name": "ReminderTemplateModel",
+      "properties": [
+        {
+          "id": "1:3774224947580210741",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7391264039729391973",
+          "name": "templateId",
+          "type": 9,
+          "flags": 2080,
+          "indexId": "5:3982753243606089139"
+        },
+        {
+          "id": "3:2087230642354128135",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "4:4556508213141085240",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "5:8160594217564730927",
+          "name": "minutesBefore",
+          "type": 6
+        },
+        {
+          "id": "6:5279031476445618960",
+          "name": "type",
+          "type": 2
+        },
+        {
+          "id": "7:5542896224568717962",
+          "name": "customMessage",
+          "type": 9
+        },
+        {
+          "id": "8:4978914809328735436",
+          "name": "isDefault",
+          "type": 1
+        },
+        {
+          "id": "9:4980293587006764924",
+          "name": "createdAt",
+          "type": 10
+        },
+        {
+          "id": "10:45698094348914599",
+          "name": "updatedAt",
+          "type": 10
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:4984863835351113986",
+      "lastPropertyId": "15:6006006967663797793",
+      "name": "ScheduleModel",
+      "properties": [
+        {
+          "id": "1:7674266981860682102",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8078511232121078749",
+          "name": "scheduleId",
+          "type": 9,
+          "flags": 2080,
+          "indexId": "6:7034166725792878451"
+        },
+        {
+          "id": "3:7596952975789001204",
+          "name": "title",
+          "type": 9
+        },
+        {
+          "id": "4:8612396065852059159",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "5:6946689649467867132",
+          "name": "startTime",
+          "type": 10
+        },
+        {
+          "id": "6:3013035726552366450",
+          "name": "endTime",
+          "type": 10
+        },
+        {
+          "id": "7:1860097543820309386",
+          "name": "location",
+          "type": 9
+        },
+        {
+          "id": "8:7215682736591290585",
+          "name": "categoryId",
+          "type": 9
+        },
+        {
+          "id": "9:3818300045862914051",
+          "name": "priority",
+          "type": 2
+        },
+        {
+          "id": "10:127898755158210337",
+          "name": "repeatRuleJson",
+          "type": 9
+        },
+        {
+          "id": "11:5415969423867699905",
+          "name": "isCompleted",
+          "type": 1
+        },
+        {
+          "id": "12:6241634704323369474",
+          "name": "createdAt",
+          "type": 10
+        },
+        {
+          "id": "13:4135243250757084392",
+          "name": "updatedAt",
+          "type": 10
+        },
+        {
+          "id": "14:4909588753892659321",
+          "name": "deviceId",
+          "type": 9
+        },
+        {
+          "id": "15:6006006967663797793",
+          "name": "syncHash",
+          "type": 9
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "5:4984863835351113986",
+  "lastIndexId": "6:7034166725792878451",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

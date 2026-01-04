@@ -1,5 +1,4 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// dart format width=80
 
 // **************************************************************************
 // InjectableConfigGenerator
@@ -21,27 +20,27 @@ import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
 extension GetItInjectableX on _i174.GetIt {
-  // initializes the registration of main-scope dependencies inside of GetIt
+// initializes the registration of main-scope dependencies inside of GetIt
   _i174.GetIt init({
     String? environment,
     _i526.EnvironmentFilter? environmentFilter,
   }) {
-    final gh = _i526.GetItHelper(this, environment, environmentFilter);
+    final gh = _i526.GetItHelper(
+      this,
+      environment,
+      environmentFilter,
+    );
     final notificationModule = _$NotificationModule();
     final registerModule = _$RegisterModule();
     gh.lazySingleton<_i998.DatabaseService>(() => _i998.DatabaseService());
     gh.lazySingleton<_i163.FlutterLocalNotificationsPlugin>(
-      () => notificationModule.flutterLocalNotificationsPlugin,
-    );
+        () => notificationModule.flutterLocalNotificationsPlugin);
     gh.lazySingleton<_i895.Connectivity>(() => registerModule.connectivity);
     gh.lazySingleton<_i972.ApiClient>(() => registerModule.apiClient);
-    gh.lazySingleton<_i52.NotificationService>(
-      () =>
-          _i52.NotificationService(gh<_i163.FlutterLocalNotificationsPlugin>()),
-    );
+    gh.lazySingleton<_i52.NotificationService>(() =>
+        _i52.NotificationService(gh<_i163.FlutterLocalNotificationsPlugin>()));
     gh.lazySingleton<_i430.NetworkInfo>(
-      () => _i843.NetworkInfoImpl(gh<_i895.Connectivity>()),
-    );
+        () => _i843.NetworkInfoImpl(gh<_i895.Connectivity>()));
     return this;
   }
 }

@@ -64,9 +64,9 @@ This implementation plan converts the Clove Todo scheduling application design i
     - **Property 4: Schedule Update Timestamp Consistency**
     - **Validates: Requirements 1.4**
 
-- [ ] 4. Domain Layer - Reminder System
+- [x] 4. Domain Layer - Reminder System
 
-  - [ ] 4.1 Implement reminder use cases
+  - [x] 4.1 Implement reminder use cases
 
     - Create AddReminder use case with time calculation
     - Implement CancelReminder use case
@@ -74,7 +74,7 @@ This implementation plan converts the Clove Todo scheduling application design i
     - Implement ApplyReminderTemplate use case
     - _Requirements: 2.1, 2.2, 2.3_
 
-  - [ ] 4.2 Create reminder template management use cases
+  - [x] 4.2 Create reminder template management use cases
 
     - Implement CreateReminderTemplate use case
     - Create UpdateReminderTemplate use case
@@ -82,23 +82,23 @@ This implementation plan converts the Clove Todo scheduling application design i
     - Create GetReminderTemplates use case
     - _Requirements: 5.1, 5.2, 5.4, 5.5_
 
-  - [ ] 4.3 Write property test for reminder time calculation
+  - [x] 4.3 Write property test for reminder time calculation
 
     - **Property 2: Reminder Time Calculation Accuracy**
     - **Validates: Requirements 2.1, 2.3**
 
-  - [ ] 4.4 Write property test for default reminder application
+  - [x] 4.4 Write property test for default reminder application
 
     - **Property 3: Default Reminder Application**
     - **Validates: Requirements 2.1**
 
-  - [ ] 4.5 Write property test for template configuration consistency
+  - [x] 4.5 Write property test for template configuration consistency
     - **Property 4: Template Reminder Configuration Consistency**
     - **Validates: Requirements 2.2, 5.3**
 
-- [ ] 5. Data Layer - Models and ObjectBox Setup
+- [x] 5. Data Layer - Models and ObjectBox Setup
 
-  - [ ] 5.1 Set up ObjectBox database service
+  - [x] 5.1 Set up ObjectBox database service
 
     - Create ObjectBoxService singleton with initialization
     - Configure database path and store management
@@ -106,7 +106,7 @@ This implementation plan converts the Clove Todo scheduling application design i
     - Set up error handling for database operations
     - _Requirements: 8.4_
 
-  - [ ] 5.2 Create ObjectBox models
+  - [x] 5.2 Create ObjectBox models
 
     - Implement ScheduleModel with ObjectBox annotations
     - Create ReminderModel with ToOne relationship to Schedule
@@ -115,7 +115,7 @@ This implementation plan converts the Clove Todo scheduling application design i
     - Create entity conversion methods (toEntity/fromEntity)
     - _Requirements: 1.1, 1.2, 2.1, 4.1_
 
-  - [ ] 5.3 Generate ObjectBox code and test database operations
+  - [x] 5.3 Generate ObjectBox code and test database operations
 
     - Run build_runner to generate ObjectBox code
     - Test basic CRUD operations with sample data
@@ -123,7 +123,7 @@ This implementation plan converts the Clove Todo scheduling application design i
     - Test JSON serialization for sync compatibility
     - _Requirements: 1.1, 1.4, 1.5_
 
-  - [ ] 5.4 Write property test for data persistence durability
+  - [x] 5.4 Write property test for data persistence durability
     - **Property 12: Data Persistence Durability**
     - **Validates: Requirements 8.4**
 

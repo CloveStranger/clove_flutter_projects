@@ -7,8 +7,6 @@ version: 1.0.0+1
 environment:
   sdk: ^3.10.1
 
-resolution: workspace
-
 dependencies:
   flutter:
     sdk: flutter
@@ -24,11 +22,10 @@ dependencies:
 
   # Routing
   go_router: ^13.2.2
-  auto_go_router: ^0.0.1
 
   # Database
-  drift: ^2.18.0
-  sqlite3_flutter_libs: ^0.5.24
+  objectbox: ^2.3.1
+  objectbox_flutter_libs: ^2.3.1
   path_provider: ^2.1.4
   path: ^1.9.0
 
@@ -55,15 +52,19 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  integration_test:
+    sdk: flutter
   mocktail: ^1.0.3
   flutter_lints: ^6.0.0
 
   # Code Generation
-  build_runner: ^2.10.4
+  build_runner: ^2.4.13
   injectable_generator: ^2.6.2
-  drift_dev: ^2.18.0
+  objectbox_generator: ^2.3.1
   json_serializable: ^6.8.0
-  auto_go_router_builder: ^0.0.1
+
+dependency_overrides:
+  source_gen: ^1.5.0
 
 flutter:
   uses-material-design: true
