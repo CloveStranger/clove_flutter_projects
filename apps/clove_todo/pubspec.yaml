@@ -1,6 +1,6 @@
 name: clove_todo
-description: "A new Flutter project."
-publish_to: "none" # Remove this line if you wish to publish to pub.dev
+description: 'A new Flutter project.'
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
@@ -13,21 +13,56 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
+
+  # State Management
   flutter_bloc: ^8.1.6
   equatable: ^2.0.5
+
+  # Dependency Injection
   get_it: ^7.7.0
+  injectable: ^2.4.2
+
+  # Routing
   go_router: ^13.2.2
-  dio: ^5.4.0
-  table_calendar: ^3.2.0
-  intl: ^0.20.2
   auto_go_router: ^0.0.1
+
+  # Database
+  drift: ^2.18.0
+  sqlite3_flutter_libs: ^0.5.24
+  path_provider: ^2.1.4
+  path: ^1.9.0
+
+  # Networking
+  dio: ^5.4.0
+  connectivity_plus: ^6.0.5
+
+  # UI Components
+  table_calendar: ^3.2.0
+
+  # Notifications
+  flutter_local_notifications: ^17.2.3
+  timezone: ^0.9.4
+
+  # Utilities
+  intl: ^0.20.2
+  uuid: ^4.5.1
+  json_annotation: ^4.9.0
+  dartz: ^0.10.1
+
+  # File System
+  # path_provider: ^2.1.4 # Moved to database section
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   mocktail: ^1.0.3
   flutter_lints: ^6.0.0
+
+  # Code Generation
   build_runner: ^2.10.4
+  injectable_generator: ^2.6.2
+  drift_dev: ^2.18.0
+  json_serializable: ^6.8.0
   auto_go_router_builder: ^0.0.1
 
 flutter:

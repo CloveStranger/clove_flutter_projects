@@ -1,7 +1,28 @@
 targets:
   $default:
     builders:
-      auto_go_router_builder:
+      drift_dev:
         enabled: true
         generate_for:
-          - lib/app/config/routes.dart
+          - lib/core/database/*.dart
+          - lib/features/*/data/models/*.dart
+        options:
+          # Drift configuration
+          skip_verification_code: false
+          use_data_class_name_for_companions: true
+          use_sql_column_name_as_json_key: true
+      json_serializable:
+        generate_for:
+          - lib/features/*/data/models/*.dart
+        options:
+          # JSON serialization configuration
+          any_map: false
+          checked: false
+          create_factory: true
+          create_to_json: true
+          disallow_unrecognized_keys: false
+          explicit_to_json: false
+          field_rename: none
+          generic_argument_factories: false
+          ignore_unannotated: false
+          include_if_null: true
