@@ -24,30 +24,30 @@ This implementation plan converts the Clove Todo scheduling application design i
   - Implement base UseCase class structure
   - _Requirements: 8.3, 8.4_
 
-- [ ] 3. Domain Layer - Schedule Management
+- [x] 3. Domain Layer - Schedule Management
 
-  - [ ] 3.1 Create Schedule and related entities (Priority, RepeatRule enums)
+  - [x] 3.1 Create Schedule and related entities (Priority, RepeatRule enums)
 
     - Define Schedule entity with all required fields
     - Create RepeatRule value object with validation
     - Implement Priority and RepeatType enumerations
     - _Requirements: 1.1, 1.2, 1.3_
 
-  - [ ] 3.2 Create Reminder entities and types
+  - [x] 3.2 Create Reminder entities and types
 
     - Define Reminder entity with timing calculations
     - Create ReminderType and ReminderTemplate entities
     - Implement reminder time calculation logic
     - _Requirements: 2.1, 2.2, 2.3_
 
-  - [ ] 3.3 Define repository interfaces
+  - [x] 3.3 Define repository interfaces
 
     - Create ScheduleRepository interface with all CRUD operations
     - Define ReminderRepository interface for reminder management
     - Create SyncRepository interface for device synchronization
     - _Requirements: 1.1, 1.4, 1.5, 4.1, 4.2_
 
-  - [ ] 3.4 Implement core use cases for schedule management
+  - [x] 3.4 Implement core use cases for schedule management
 
     - Create AddSchedule use case with validation
     - Implement UpdateSchedule use case with timestamp handling
@@ -55,12 +55,12 @@ This implementation plan converts the Clove Todo scheduling application design i
     - Implement GetSchedules and GetScheduleById use cases
     - _Requirements: 1.1, 1.4, 1.5_
 
-  - [ ] 3.5 Write property test for schedule creation completeness
+  - [x] 3.5 Write property test for schedule creation completeness
 
     - **Property 1: Schedule Creation Completeness**
     - **Validates: Requirements 1.1, 1.2**
 
-  - [ ] 3.6 Write property test for schedule update consistency
+  - [x] 3.6 Write property test for schedule update consistency
     - **Property 4: Schedule Update Timestamp Consistency**
     - **Validates: Requirements 1.4**
 
