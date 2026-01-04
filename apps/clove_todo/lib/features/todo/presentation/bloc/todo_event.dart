@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:clove_todo/features/todo/domain/entities/todo.dart';
+import '../../domain/entities/todo.dart';
 
 /// Base class for all Todo events
 abstract class TodoEvent extends Equatable {

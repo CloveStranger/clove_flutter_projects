@@ -5,8 +5,8 @@ import 'package:clove_todo/features/todo/data/datasources/todo_local_data_source
 import 'package:clove_todo/features/todo/data/datasources/todo_remote_data_source.dart';
 import 'package:clove_todo/features/todo/data/models/todo_model.dart';
 import 'package:clove_todo/features/todo/data/repositories/todo_repository_impl.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:test/test.dart';
 
 class _MockRemote extends Mock implements TodoRemoteDataSource {}
 
@@ -22,23 +22,13 @@ void main() {
   late _MockNetworkInfo networkInfo;
   late TodoRepositoryImpl repository;
 
-  final sampleTodos = [
-    TodoModel(
-      id: '1',
-      title: 'Sample',
-      createdAt: DateTime.parse('2024-01-01'),
-    )
-  ];
+  final sampleTodos = [TodoModel(id: '1', title: 'Sample', createdAt: DateTime.parse('2024-01-01'))];
 
   setUp(() {
     remote = _MockRemote();
     local = _MockLocal();
     networkInfo = _MockNetworkInfo();
-    repository = TodoRepositoryImpl(
-      remoteDataSource: remote,
-      localDataSource: local,
-      networkInfo: networkInfo,
-    );
+    repository = TodoRepositoryImpl(remoteDataSource: remote, localDataSource: local, networkInfo: networkInfo);
   });
 
   setUpAll(() {
@@ -74,10 +64,7 @@ void main() {
       when(() => networkInfo.isConnected).thenAnswer((_) async => false);
       when(() => local.getTodos()).thenThrow(const CacheException('cache fail'));
 
-      expect(
-        () => repository.getTodos(),
-        throwsA(isA<CacheFailure>()),
-      );
+      expect(() => repository.getTodos(), throwsA(isA<CacheFailure>()));
     });
   });
 
@@ -97,10 +84,7 @@ void main() {
       when(() => networkInfo.isConnected).thenAnswer((_) async => false);
       when(() => local.getTodoById('missing')).thenAnswer((_) async => null);
 
-      expect(
-        () => repository.getTodoById('missing'),
-        throwsA(isA<CacheFailure>()),
-      );
+      expect(() => repository.getTodoById('missing'), throwsA(isA<CacheFailure>()));
     });
   });
 
@@ -130,4 +114,3 @@ void main() {
     });
   });
 }
-

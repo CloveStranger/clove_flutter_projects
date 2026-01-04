@@ -1,17 +1,17 @@
 import 'package:get_it/get_it.dart';
-import 'package:clove_todo/core/network/api_client.dart';
-import 'package:clove_todo/core/network/network_info.dart';
-import 'package:clove_todo/core/utils/constants.dart';
-import 'package:clove_todo/features/todo/data/datasources/todo_local_data_source.dart';
-import 'package:clove_todo/features/todo/data/datasources/todo_remote_data_source.dart';
-import 'package:clove_todo/features/todo/data/repositories/todo_repository_impl.dart';
-import 'package:clove_todo/features/todo/domain/repositories/todo_repository.dart';
-import 'package:clove_todo/features/todo/domain/usecases/add_todo.dart';
-import 'package:clove_todo/features/todo/domain/usecases/delete_todo.dart';
-import 'package:clove_todo/features/todo/domain/usecases/get_todos.dart';
-import 'package:clove_todo/features/todo/domain/usecases/toggle_todo.dart';
-import 'package:clove_todo/features/todo/domain/usecases/update_todo.dart';
-import 'package:clove_todo/features/todo/presentation/bloc/todo_bloc.dart';
+import '../core/network/api_client.dart';
+import '../core/network/network_info.dart';
+import '../core/utils/constants.dart';
+import '../features/todo/data/datasources/todo_local_data_source.dart';
+import '../features/todo/data/datasources/todo_remote_data_source.dart';
+import '../features/todo/data/repositories/todo_repository_impl.dart';
+import '../features/todo/domain/repositories/todo_repository.dart';
+import '../features/todo/domain/usecases/add_todo.dart';
+import '../features/todo/domain/usecases/delete_todo.dart';
+import '../features/todo/domain/usecases/get_todos.dart';
+import '../features/todo/domain/usecases/toggle_todo.dart';
+import '../features/todo/domain/usecases/update_todo.dart';
+import '../features/todo/presentation/bloc/todo_bloc.dart';
 
 /// Service locator instance
 final sl = GetIt.instance;
@@ -56,9 +56,7 @@ Future<void> init() async {
   );
 
   //! Core
-  sl.registerLazySingleton<NetworkInfo>(
-    () => NetworkInfoImpl(),
-  );
+  sl.registerLazySingleton<NetworkInfo>(() => NetworkInfoImpl());
 
   sl.registerLazySingleton(
     () => ApiClient(
@@ -79,4 +77,3 @@ class NetworkInfoImpl implements NetworkInfo {
     return true;
   }
 }
-

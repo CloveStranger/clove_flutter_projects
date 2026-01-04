@@ -1,4 +1,4 @@
-import 'package:clove_todo/features/todo/domain/entities/todo.dart';
+import '../entities/todo.dart';
 
 /// Abstract repository interface for Todo operations
 abstract class TodoRepository {

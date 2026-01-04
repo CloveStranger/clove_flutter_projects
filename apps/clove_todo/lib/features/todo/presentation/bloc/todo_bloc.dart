@@ -1,12 +1,12 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:clove_todo/core/error/failures.dart';
-import 'package:clove_todo/features/todo/domain/usecases/add_todo.dart';
-import 'package:clove_todo/features/todo/domain/usecases/delete_todo.dart';
-import 'package:clove_todo/features/todo/domain/usecases/get_todos.dart';
-import 'package:clove_todo/features/todo/domain/usecases/toggle_todo.dart';
-import 'package:clove_todo/features/todo/domain/usecases/update_todo.dart';
-import 'package:clove_todo/features/todo/presentation/bloc/todo_event.dart';
-import 'package:clove_todo/features/todo/presentation/bloc/todo_state.dart';
+import '../../../../core/error/failures.dart';
+import '../../domain/usecases/add_todo.dart';
+import '../../domain/usecases/delete_todo.dart';
+import '../../domain/usecases/get_todos.dart';
+import '../../domain/usecases/toggle_todo.dart';
+import '../../domain/usecases/update_todo.dart';
+import 'todo_event.dart';
+import 'todo_state.dart';
 
 /// BLoC for managing Todo state
 class TodoBloc extends Bloc<TodoEvent, TodoState> {

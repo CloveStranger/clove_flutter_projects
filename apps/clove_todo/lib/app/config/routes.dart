@@ -1,5 +1,5 @@
 import 'package:auto_go_router/auto_go_router.dart';
-import 'package:clove_todo/features/todo/presentation/pages/todo_page.dart';
+import '../../features/todo/presentation/pages/todo_page.dart';
 
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:clove_todo/features/todo/domain/entities/todo.dart';
+import '../../domain/entities/todo.dart';
 
 /// Widget for displaying a single todo item
 class TodoItemTile extends StatelessWidget {

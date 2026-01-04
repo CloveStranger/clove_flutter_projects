@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:clove_todo/core/error/exceptions.dart';
+import '../error/exceptions.dart';
 
 /// API client wrapper using Dio
 class ApiClient {

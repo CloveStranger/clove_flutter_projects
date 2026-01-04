@@ -1,5 +1,5 @@
-import 'package:clove_todo/core/error/exceptions.dart';
-import 'package:clove_todo/features/todo/data/models/todo_model.dart';
+import '../../../../core/error/exceptions.dart';
+import '../models/todo_model.dart';
 
 /// Abstract interface for local data source
 abstract class TodoLocalDataSource {

@@ -1,4 +1,4 @@
-import 'package:clove_todo/features/todo/domain/entities/todo.dart';
+import '../../domain/entities/todo.dart';
 
 /// Todo model - DTO for serialization
 class TodoModel {

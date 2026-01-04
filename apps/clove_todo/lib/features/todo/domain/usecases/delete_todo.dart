@@ -1,5 +1,5 @@
-import 'package:clove_todo/core/usecase/usecase.dart';
-import 'package:clove_todo/features/todo/domain/repositories/todo_repository.dart';
+import '../../../../core/usecase/usecase.dart';
+import '../repositories/todo_repository.dart';
 
 /// Parameters for DeleteTodo use case
 class DeleteTodoParams {

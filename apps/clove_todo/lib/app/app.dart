@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:clove_todo/app/config/routes.dart';
-import 'package:clove_todo/app/theme/app_theme.dart';
-import 'package:clove_todo/features/todo/presentation/pages/todo_page.dart';
+import 'config/routes.dart';
+import 'theme/app_theme.dart';
+import '../features/todo/presentation/pages/todo_page.dart';
 
 final _router = GoRouter(
   initialLocation: AppRoutes.todoList,
-  routes: [
-    GoRoute(
-      path: AppRoutes.todoList,
-      name: 'todoList',
-      builder: (context, state) => const TodoPage(),
-    ),
-  ],
+  routes: [GoRoute(path: AppRoutes.todoList, name: 'todoList', builder: (context, state) => const TodoPage())],
 );
 
 /// Root application widget

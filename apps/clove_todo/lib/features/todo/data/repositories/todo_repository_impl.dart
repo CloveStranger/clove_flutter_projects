@@ -1,11 +1,11 @@
-import 'package:clove_todo/core/error/exceptions.dart';
-import 'package:clove_todo/core/error/failures.dart';
-import 'package:clove_todo/core/network/network_info.dart';
-import 'package:clove_todo/features/todo/data/datasources/todo_local_data_source.dart';
-import 'package:clove_todo/features/todo/data/datasources/todo_remote_data_source.dart';
-import 'package:clove_todo/features/todo/data/models/todo_model.dart';
-import 'package:clove_todo/features/todo/domain/entities/todo.dart';
-import 'package:clove_todo/features/todo/domain/repositories/todo_repository.dart';
+import '../../../../core/error/exceptions.dart';
+import '../../../../core/error/failures.dart';
+import '../../../../core/network/network_info.dart';
+import '../datasources/todo_local_data_source.dart';
+import '../datasources/todo_remote_data_source.dart';
+import '../models/todo_model.dart';
+import '../../domain/entities/todo.dart';
+import '../../domain/repositories/todo_repository.dart';
 
 /// Implementation of TodoRepository
 class TodoRepositoryImpl implements TodoRepository {
@@ -33,8 +33,8 @@ class TodoRepositoryImpl implements TodoRepository {
       return localTodos.map((model) => model.toEntity()).toList();
     } on AppException catch (e) {
       throw _mapExceptionToFailure(e);
-    } on Failure catch (e) {
-      throw e;
+    } on Failure {
+      rethrow;
     } catch (e) {
       throw GeneralFailure('Unexpected error: ${e.toString()}');
     }
@@ -57,8 +57,8 @@ class TodoRepositoryImpl implements TodoRepository {
       throw const CacheFailure('Todo not found in cache');
     } on AppException catch (e) {
       throw _mapExceptionToFailure(e);
-    } on Failure catch (e) {
-      throw e;
+    } on Failure {
+      rethrow;
     } catch (e) {
       throw GeneralFailure('Unexpected error: ${e.toString()}');
     }
@@ -83,8 +83,8 @@ class TodoRepositoryImpl implements TodoRepository {
       return todoModel.toEntity();
     } on AppException catch (e) {
       throw _mapExceptionToFailure(e);
-    } on Failure catch (e) {
-      throw e;
+    } on Failure {
+      rethrow;
     } catch (e) {
       throw GeneralFailure('Unexpected error: ${e.toString()}');
     }
@@ -109,8 +109,8 @@ class TodoRepositoryImpl implements TodoRepository {
       return todoModel.toEntity();
     } on AppException catch (e) {
       throw _mapExceptionToFailure(e);
-    } on Failure catch (e) {
-      throw e;
+    } on Failure {
+      rethrow;
     } catch (e) {
       throw GeneralFailure('Unexpected error: ${e.toString()}');
     }
@@ -128,8 +128,8 @@ class TodoRepositoryImpl implements TodoRepository {
       }
     } on AppException catch (e) {
       throw _mapExceptionToFailure(e);
-    } on Failure catch (e) {
-      throw e;
+    } on Failure {
+      rethrow;
     } catch (e) {
       throw GeneralFailure('Unexpected error: ${e.toString()}');
     }

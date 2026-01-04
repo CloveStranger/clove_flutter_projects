@@ -1,6 +1,6 @@
-import 'package:clove_todo/core/error/exceptions.dart';
-import 'package:clove_todo/core/network/api_client.dart';
-import 'package:clove_todo/features/todo/data/models/todo_model.dart';
+import '../../../../core/error/exceptions.dart';
+import '../../../../core/network/api_client.dart';
+import '../models/todo_model.dart';
 
 /// Abstract interface for remote data source
 abstract class TodoRemoteDataSource {

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:intl/intl.dart';
-import 'package:clove_todo/features/todo/domain/entities/todo.dart';
-import 'package:clove_todo/features/todo/presentation/bloc/todo_bloc.dart';
-import 'package:clove_todo/features/todo/presentation/bloc/todo_event.dart';
-import 'package:clove_todo/features/todo/presentation/bloc/todo_state.dart';
-import 'package:clove_todo/features/todo/presentation/widgets/todo_item_tile.dart';
-import 'package:clove_todo/features/todo/presentation/widgets/home_app_bar.dart';
+import '../../domain/entities/todo.dart';
+import '../bloc/todo_bloc.dart';
+import '../bloc/todo_event.dart';
+import '../bloc/todo_state.dart';
+import '../widgets/todo_item_tile.dart';
+import '../widgets/home_app_bar.dart';
 
 /// Main page for displaying and managing todos with a calendar view
 class TodoPage extends StatefulWidget {

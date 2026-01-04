@@ -1,5 +1,5 @@
 import 'package:clove_todo/core/utils/validators.dart';
-import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('Validators.notEmpty', () {
@@ -42,4 +42,3 @@ void main() {
     });
   });
 }
-
