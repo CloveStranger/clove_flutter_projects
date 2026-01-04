@@ -1,4 +1,4 @@
-import '../../../../core/usecase/usecase.dart';
+import '../../../../core/usecase/legacy_usecase.dart';
 import '../entities/todo.dart';
 import '../repositories/todo_repository.dart';
 
@@ -10,7 +10,7 @@ class ToggleTodoParams {
 }
 
 /// Use case for toggling todo completion status
-class ToggleTodo implements UseCase<Todo, ToggleTodoParams> {
+class ToggleTodo implements LegacyUseCase<Todo, ToggleTodoParams> {
   final TodoRepository repository;
 
   ToggleTodo(this.repository);
@@ -20,4 +20,3 @@ class ToggleTodo implements UseCase<Todo, ToggleTodoParams> {
     return repository.toggleTodo(params.id);
   }
 }
-

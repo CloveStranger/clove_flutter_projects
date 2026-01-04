@@ -1,4 +1,4 @@
-import '../../../../core/usecase/usecase.dart';
+import '../../../../core/usecase/legacy_usecase.dart';
 import '../entities/todo.dart';
 import '../repositories/todo_repository.dart';
 
@@ -10,7 +10,7 @@ class UpdateTodoParams {
 }
 
 /// Use case for updating an existing todo
-class UpdateTodo implements UseCase<Todo, UpdateTodoParams> {
+class UpdateTodo implements LegacyUseCase<Todo, UpdateTodoParams> {
   final TodoRepository repository;
 
   UpdateTodo(this.repository);
@@ -20,4 +20,3 @@ class UpdateTodo implements UseCase<Todo, UpdateTodoParams> {
     return repository.updateTodo(params.todo);
   }
 }
-

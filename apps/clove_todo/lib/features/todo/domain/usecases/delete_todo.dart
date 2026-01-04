@@ -1,4 +1,4 @@
-import '../../../../core/usecase/usecase.dart';
+import '../../../../core/usecase/legacy_usecase.dart';
 import '../repositories/todo_repository.dart';
 
 /// Parameters for DeleteTodo use case
@@ -9,7 +9,7 @@ class DeleteTodoParams {
 }
 
 /// Use case for deleting a todo
-class DeleteTodo implements UseCase<void, DeleteTodoParams> {
+class DeleteTodo implements LegacyUseCase<void, DeleteTodoParams> {
   final TodoRepository repository;
 
   DeleteTodo(this.repository);
@@ -19,4 +19,3 @@ class DeleteTodo implements UseCase<void, DeleteTodoParams> {
     return repository.deleteTodo(params.id);
   }
 }
-

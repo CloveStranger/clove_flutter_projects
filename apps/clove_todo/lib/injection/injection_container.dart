@@ -30,9 +30,22 @@ class NetworkInfoImpl implements NetworkInfo {
   @override
   Future<bool> get isConnected async {
     final connectivityResult = await _connectivity.checkConnectivity();
-    return connectivityResult.contains(ConnectivityResult.mobile) ||
-        connectivityResult.contains(ConnectivityResult.wifi) ||
-        connectivityResult.contains(ConnectivityResult.ethernet);
+    return connectivityResult.any(
+      (connectivity) =>
+          connectivity == ConnectivityResult.mobile ||
+          connectivity == ConnectivityResult.wifi ||
+          connectivity == ConnectivityResult.ethernet,
+    );
+  }
+
+  @override
+  Future<List<ConnectivityResult>> get connectivityResult async {
+    return await _connectivity.checkConnectivity();
+  }
+
+  @override
+  Stream<List<ConnectivityResult>> get onConnectivityChanged {
+    return _connectivity.onConnectivityChanged;
   }
 }
 
